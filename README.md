@@ -15,9 +15,9 @@ SO THAT I can organize my company.
 
 ## Screenshot of Completed Application
 
-![Employee Tracker Demo](/images/image1.png)
-![Employee Tracker Demo](/images/image2.png)
-![Employee Tracker Demo](/images/image3.png)
+![Employee Tracker Demo](images/image1.png)
+![Employee Tracker Demo](images/image2.png)
+![Employee Tracker Demo](images/image3.png)
 
 
 
