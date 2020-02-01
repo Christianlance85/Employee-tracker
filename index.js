@@ -6,7 +6,7 @@ const connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "root",
+  password: "",
   database: "employeeTracker_db"
 });
 
@@ -175,7 +175,7 @@ function add_employee() {
           }
         ])
         .then(function({ first_name, last_name, role_id, manager_id }) {
-          let queryText = `INSERT INTO employee (first_name, last_name, role_id`;
+          let queryText = `INSERT INTO employee (first_name, last_name, role_id) VALUES ('${first_name}, ${last_name}, ${role_id})`;
           if (manager_id != "none") {
             queryText += `, manager_id) VALUES ('${first_name}', '${last_name}', ${roles.indexOf(
               role_id
@@ -185,7 +185,7 @@ function add_employee() {
               role_id
             ) + 1})`;
           }
-          console.log(queryText);
+
 
           connection.query(queryText, function(err, data) {
             if (err) throw err;
